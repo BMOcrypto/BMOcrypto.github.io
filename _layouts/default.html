@@ -1,0 +1,37 @@
+<!-- File: _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+
+  <!-- Site‑wide CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- Optional AdSense (enable by setting adsense_id in _config.yml) -->
+  {% if site.adsense_id %}
+  <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_id }}"
+          crossorigin="anonymous"></script>
+  {% endif %}
+</head>
+<body>
+  <!-- Navigation -->
+  {% include nav.html %}
+
+  <!-- Main content -->
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  {% include footer.html %}
+
+  <!-- Optional site‑wide JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
