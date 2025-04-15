@@ -1,0 +1,33 @@
+/* File: assets/css/style.css */
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+}
+.content {
+  margin-top: 2rem;
+}
+footer {
+  text-align: center;
+  margin: 2rem 0;
+}
+.ad-unit {
+  margin: 2rem 0;
+  text-align: center;
+}
+.affiliate {
+  display: block;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
