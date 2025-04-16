@@ -5,20 +5,44 @@ description: "{{ site.description }}"
 permalink: "/"
 ---
 
-<section class="hero">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
-</section>
+<!-- Featured Hero -->
+<div class="featured">
+  <div class="featured-book">
+    <img src="{{ '/assets/images/big-magic.jpg' | relative_url }}" alt="Big Magic">
+    <div class="featured-info">
+      <span class="tag">Featured</span>
+      <h2>Big Magic</h2>
+      <p>Creative Living Beyond Fear</p>
+      <a href="/big-magic/" class="btn">Read the Book</a>
+    </div>
+  </div>
+  <div class="featured-cover">
+    <img src="{{ '/assets/images/ten-thousand-skies.jpg' | relative_url }}" alt="Ten Thousand Skies and You">
+  </div>
+</div>
 
-<section class="summaries">
-  <h2>Book Summaries</h2>
+<!-- Category Tabs -->
+<nav class="categories">
   <ul>
-    {% for page in site.pages %}
-      {% if page.layout == "summary" %}
-        <li>
-          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
+    <li class="active">Popular by Genre</li>
+    <li>All Genres</li>
+    <li>Business</li>
+    <li>Science</li>
+    <li>Fiction</li>
   </ul>
+</nav>
+
+<!-- Grid of Summaries -->
+<section class="book-grid">
+  {% for page in site.pages %}
+    {% if page.layout == "summary" %}
+      <div class="card">
+        <a href="{{ page.url | relative_url }}">
+          <img src="{{ '/assets/images/' | append: page.permalink | remove: '/' | append: '.jpg' | relative_url }}"
+               alt="{{ page.book }}">
+          <h3>{{ page.book }}</h3>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
 </section>

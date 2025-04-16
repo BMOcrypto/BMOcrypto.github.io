@@ -4,43 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{{ page.title }} | {{ site.title }}</title>
-
-  <!-- AdSense site‑wide setup -->
-  <script async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUB_ID"
-          crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUB_ID" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <header>
     <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
   </header>
-
   <article>
     <h2>{{ page.title }}</h2>
     {{ content }}
-
-    <!-- In‑content AdSense -->
     <div class="ad-unit">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-YOUR_PUB_ID"
-           data-ad-slot="YOUR_AD_SLOT"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-YOUR_PUB_ID" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-
-    <!-- Amazon Associates button -->
     <p>
-      <a href="https://www.amazon.com/dp/{{ page.asin }}?tag=YOUR_ASSOCIATE_ID"
-         target="_blank" rel="noopener">
+      <a href="https://www.amazon.com/dp/{{ page.asin }}?tag=YOUR_ASSOCIATE_ID" target="_blank" rel="noopener" class="affiliate">
         ▶ Buy {{ page.book }} on Amazon
       </a>
     </p>
   </article>
-
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. Content in the public domain.</p>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All content in the public domain.</p>
   </footer>
 </body>
 </html>

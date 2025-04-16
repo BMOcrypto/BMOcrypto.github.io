@@ -13,5 +13,3 @@ permalink: /pride-and-prejudice/
   <li>Genre: Romance / Satire</li>
   <li>Pages: 279</li>
 </ul>
-
-<!-- more summary paragraphs here -->

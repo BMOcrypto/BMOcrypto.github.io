@@ -1,5 +1,4 @@
-# File: _config.yml
 title: "Public‑Domain Book Summaries"
 author: "Your Name"
 description: "Quick, SEO‑optimized overviews of classic literature"
-adsense_id: "ca-pub-YOUR_PUB_ID"   # remove or leave blank to disable AdSense
+adsense_id: "ca-pub-YOUR_PUB_ID"

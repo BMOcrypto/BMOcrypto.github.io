@@ -1,11 +1,5 @@
-<!-- File: _includes/nav.html -->
-<nav>
-  <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    {% for page in site.pages %}
-      {% if page.layout == "summary" %}
-        <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
+<header>
+  <nav>
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  </nav>
+</header>
